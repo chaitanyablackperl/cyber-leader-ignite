@@ -10,12 +10,14 @@ const Index = () => {
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between px-4 md:px-8">
           <div className="flex items-center gap-6">
-            <h2 className="text-xl font-bold text-foreground">GIM × BlackPerl</h2>
+            <h2 className="text-xl font-bold text-foreground">GIM</h2>
           </div>
           <nav className="hidden md:flex gap-6">
             <a href="#overview" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Overview</a>
             <a href="#program" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Program</a>
             <a href="#curriculum" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Curriculum</a>
+            <a href="#faculty" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Faculty</a>
+            <a href="#success" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Success Stories</a>
             <a href="#details" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Details</a>
           </nav>
           <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Apply Now</Button>
@@ -28,7 +30,7 @@ const Index = () => {
         <div className="container relative px-4 md:px-8 py-20 md:py-32">
           <div className="max-w-4xl">
             <Badge className="mb-6 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-4 py-1.5">
-              In Collaboration with BlackPerl DFIR
+              Technological Partner - BlackPerl DFIR
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Advanced Cybersecurity Programme for Leaders
@@ -239,6 +241,132 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Faculty Section */}
+      <section id="faculty" className="py-20 bg-background">
+        <div className="container px-4 md:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Expert Faculty</h2>
+          <p className="text-center text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
+            Learn from industry leaders and academic experts who bring decades of experience in cybersecurity, governance, and AI-driven defense strategies.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
+                <GraduationCap className="h-12 w-12 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">GIM Faculty</h3>
+              <p className="text-sm text-accent mb-3">Academic Excellence</p>
+              <p className="text-sm text-muted-foreground">
+                Distinguished professors from one of India's top business schools, bringing strategic and leadership perspectives.
+              </p>
+            </Card>
+            <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
+                <Shield className="h-12 w-12 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">BlackPerl Experts</h3>
+              <p className="text-sm text-accent mb-3">Industry Practitioners</p>
+              <p className="text-sm text-muted-foreground">
+                Seasoned cybersecurity professionals with hands-on experience in digital forensics and incident response.
+              </p>
+            </Card>
+            <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
+                <Users className="h-12 w-12 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Guest Speakers</h3>
+              <p className="text-sm text-accent mb-3">Industry Leaders</p>
+              <p className="text-sm text-muted-foreground">
+                CISOs and security leaders from top organizations sharing real-world insights and case studies.
+              </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories */}
+      <section id="success" className="py-20 bg-secondary/20">
+        <div className="container px-4 md:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Success Stories</h2>
+          <p className="text-center text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
+            Hear from our alumni who have transformed their careers and organizations through our program.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center flex-shrink-0">
+                  <Award className="h-8 w-8 text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold">Elevated to CISO Role</h3>
+                  <p className="text-sm text-muted-foreground">Senior IT Manager</p>
+                </div>
+              </div>
+              <p className="text-muted-foreground italic mb-4">
+                "The program's blend of strategic governance and hands-on AI integration gave me the confidence to lead our organization's security transformation. Within 6 months, I was promoted to CISO."
+              </p>
+              <div className="flex items-center gap-2 text-sm text-accent">
+                <CheckCircle2 className="h-4 w-4" />
+                <span>Promoted to C-Suite</span>
+              </div>
+            </Card>
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center flex-shrink-0">
+                  <TrendingUp className="h-8 w-8 text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold">Built Enterprise Security Framework</h3>
+                  <p className="text-sm text-muted-foreground">IT Security Lead</p>
+                </div>
+              </div>
+              <p className="text-muted-foreground italic mb-4">
+                "The practical approach and real-world projects prepared me to architect and implement a comprehensive security framework for our 5000+ employee organization."
+              </p>
+              <div className="flex items-center gap-2 text-sm text-accent">
+                <CheckCircle2 className="h-4 w-4" />
+                <span>Led Major Security Initiative</span>
+              </div>
+            </Card>
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center flex-shrink-0">
+                  <Briefcase className="h-8 w-8 text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold">Started Security Consulting Firm</h3>
+                  <p className="text-sm text-muted-foreground">Former Security Analyst</p>
+                </div>
+              </div>
+              <p className="text-muted-foreground italic mb-4">
+                "The program's networking opportunities and industry connections helped me launch my own cybersecurity consulting practice. I now serve multiple Fortune 500 clients."
+              </p>
+              <div className="flex items-center gap-2 text-sm text-accent">
+                <CheckCircle2 className="h-4 w-4" />
+                <span>Entrepreneurial Success</span>
+              </div>
+            </Card>
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center flex-shrink-0">
+                  <Lock className="h-8 w-8 text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold">Enhanced Incident Response Capabilities</h3>
+                  <p className="text-sm text-muted-foreground">Security Operations Manager</p>
+                </div>
+              </div>
+              <p className="text-muted-foreground italic mb-4">
+                "The AI-powered threat detection techniques I learned reduced our incident response time by 60%. The ROI was evident within the first quarter post-completion."
+              </p>
+              <div className="flex items-center gap-2 text-sm text-accent">
+                <CheckCircle2 className="h-4 w-4" />
+                <span>Measurable Business Impact</span>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Program Details */}
       <section id="details" className="py-20 bg-background">
         <div className="container px-4 md:px-8">
@@ -303,9 +431,6 @@ const Index = () => {
             <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8">
               Apply Now
             </Button>
-            <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-              Schedule a Call
-            </Button>
           </div>
         </div>
       </section>
@@ -315,7 +440,7 @@ const Index = () => {
         <div className="container px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="font-bold text-lg mb-4">GIM × BlackPerl</h3>
+              <h3 className="font-bold text-lg mb-4">GIM</h3>
               <p className="text-sm text-muted-foreground">
                 Advanced Cybersecurity Programme for Leaders
               </p>
@@ -336,7 +461,7 @@ const Index = () => {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            <p>© 2025 GIM × BlackPerl. All rights reserved.</p>
+            <p>© 2025 GIM. All rights reserved.</p>
           </div>
         </div>
       </footer>
