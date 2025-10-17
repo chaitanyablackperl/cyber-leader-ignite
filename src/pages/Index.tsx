@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Shield, Clock, Award, Users, BookOpen, Briefcase, TrendingUp, Lock, GraduationCap, CheckCircle2 } from "lucide-react";
 
 const Index = () => {
@@ -248,37 +249,103 @@ const Index = () => {
           <p className="text-center text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
             Learn from industry leaders and academic experts who bring decades of experience in cybersecurity, governance, and AI-driven defense strategies.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
-                <GraduationCap className="h-12 w-12 text-accent" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">GIM Faculty</h3>
-              <p className="text-sm text-accent mb-3">Academic Excellence</p>
-              <p className="text-sm text-muted-foreground">
-                Distinguished professors from one of India's top business schools, bringing strategic and leadership perspectives.
-              </p>
-            </Card>
-            <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
-                <Shield className="h-12 w-12 text-accent" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">BlackPerl Experts</h3>
-              <p className="text-sm text-accent mb-3">Industry Practitioners</p>
-              <p className="text-sm text-muted-foreground">
-                Seasoned cybersecurity professionals with hands-on experience in digital forensics and incident response.
-              </p>
-            </Card>
-            <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
-                <Users className="h-12 w-12 text-accent" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Guest Speakers</h3>
-              <p className="text-sm text-accent mb-3">Industry Leaders</p>
-              <p className="text-sm text-muted-foreground">
-                CISOs and security leaders from top organizations sharing real-world insights and case studies.
-              </p>
-            </Card>
+          <div className="max-w-6xl mx-auto">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4">
+                <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
+                      <GraduationCap className="h-12 w-12 text-accent" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">Dr. Faculty Name 1</h3>
+                    <p className="text-sm text-accent mb-3">Professor, GIM</p>
+                    <p className="text-sm text-muted-foreground">
+                      Expert in strategic management and cybersecurity governance with 20+ years of academic excellence.
+                    </p>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
+                      <Shield className="h-12 w-12 text-accent" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">Expert Name 2</h3>
+                    <p className="text-sm text-accent mb-3">Lead Consultant, BlackPerl DFIR</p>
+                    <p className="text-sm text-muted-foreground">
+                      Seasoned cybersecurity professional specializing in digital forensics and incident response.
+                    </p>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
+                      <Users className="h-12 w-12 text-accent" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">CISO Name 3</h3>
+                    <p className="text-sm text-accent mb-3">Chief Information Security Officer</p>
+                    <p className="text-sm text-muted-foreground">
+                      Former CISO of Fortune 500 company with expertise in enterprise security architecture.
+                    </p>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
+                      <Lock className="h-12 w-12 text-accent" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">Dr. Faculty Name 4</h3>
+                    <p className="text-sm text-accent mb-3">AI & Security Researcher</p>
+                    <p className="text-sm text-muted-foreground">
+                      Leading researcher in AI-powered threat detection and machine learning for cybersecurity.
+                    </p>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
+                      <Award className="h-12 w-12 text-accent" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">Expert Name 5</h3>
+                    <p className="text-sm text-accent mb-3">Compliance & Risk Advisor</p>
+                    <p className="text-sm text-muted-foreground">
+                      Specialist in regulatory compliance, risk management, and cybersecurity frameworks (ISO, NIST).
+                    </p>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
+                      <Briefcase className="h-12 w-12 text-accent" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">Industry Leader 6</h3>
+                    <p className="text-sm text-accent mb-3">Cybersecurity Strategist</p>
+                    <p className="text-sm text-muted-foreground">
+                      Strategic advisor to C-suite executives on digital transformation and security investments.
+                    </p>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
+                      <TrendingUp className="h-12 w-12 text-accent" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">Expert Name 7</h3>
+                    <p className="text-sm text-accent mb-3">Penetration Testing Expert</p>
+                    <p className="text-sm text-muted-foreground">
+                      Ethical hacker and penetration testing specialist with hands-on experience in vulnerability assessment.
+                    </p>
+                  </Card>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
           </div>
         </div>
       </section>
