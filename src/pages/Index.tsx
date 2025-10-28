@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Shield, Clock, Award, Users, BookOpen, Briefcase, TrendingUp, Lock, GraduationCap, CheckCircle2 } from "lucide-react";
+import drAjitParulekar from "@/assets/dr-ajit-parulekar.png";
 
 const Index = () => {
   return (
@@ -260,13 +261,13 @@ const Index = () => {
               <CarouselContent className="-ml-4">
                 <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
-                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
-                      <GraduationCap className="h-12 w-12 text-accent" />
+                    <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
+                      <img src={drAjitParulekar} alt="Dr. Ajit Parulekar" className="w-full h-full object-cover" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">Dr. Faculty Name 1</h3>
-                    <p className="text-sm text-accent mb-3">Professor, GIM</p>
+                    <h3 className="text-xl font-semibold mb-2">Dr. Ajit Parulekar</h3>
+                    <p className="text-sm text-accent mb-3">Director of GIM</p>
                     <p className="text-sm text-muted-foreground">
-                      Expert in strategic management and cybersecurity governance with 20+ years of academic excellence.
+                      Visiting Faculty of ISCTE Business School in Portugal.
                     </p>
                   </Card>
                 </CarouselItem>
