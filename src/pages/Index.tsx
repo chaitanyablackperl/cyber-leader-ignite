@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Shield, Clock, Award, Users, BookOpen, Briefcase, TrendingUp, Lock, GraduationCap, CheckCircle2 } from "lucide-react";
 import drAjitParulekar from "@/assets/dr-ajit-parulekar.png";
+import vithalSukhathankar from "@/assets/vithal-sukhathankar.jpg";
 
 const Index = () => {
   return (
@@ -273,13 +274,13 @@ const Index = () => {
                 </CarouselItem>
                 <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
-                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
-                      <Shield className="h-12 w-12 text-accent" />
+                    <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
+                      <img src={vithalSukhathankar} alt="Vithal S. Sukhathankar" className="w-full h-full object-cover" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">Expert Name 2</h3>
-                    <p className="text-sm text-accent mb-3">Lead Consultant, BlackPerl DFIR</p>
+                    <h3 className="text-xl font-semibold mb-2">Vithal S. Sukhathankar</h3>
+                    <p className="text-sm text-accent mb-3">Associate Professor</p>
                     <p className="text-sm text-muted-foreground">
-                      Seasoned cybersecurity professional specializing in digital forensics and incident response.
+                      Member of IT Council of GCCI
                     </p>
                   </Card>
                 </CarouselItem>
