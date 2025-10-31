@@ -6,6 +6,14 @@ import { Shield, Clock, Award, Users, BookOpen, Briefcase, TrendingUp, Lock, Gra
 import drAjitParulekar from "@/assets/dr-ajit-parulekar.png";
 import vithalSukhathankar from "@/assets/vithal-sukhathankar.jpg";
 import akshayBhosale from "@/assets/akshay-bhosale.jpg";
+import faculty4 from "@/assets/faculty-4.jpg";
+import faculty5 from "@/assets/faculty-5.jpg";
+import faculty6 from "@/assets/faculty-6.jpg";
+import faculty7 from "@/assets/faculty-7.jpg";
+import successStory1 from "@/assets/success-story-1.jpg";
+import successStory2 from "@/assets/success-story-2.jpg";
+import successStory3 from "@/assets/success-story-3.jpg";
+import successStory4 from "@/assets/success-story-4.jpg";
 
 const Index = () => {
   return (
@@ -299,8 +307,8 @@ const Index = () => {
                 </CarouselItem>
                 <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
-                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
-                      <Lock className="h-12 w-12 text-accent" />
+                    <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
+                      <img src={faculty4} alt="Dr. Faculty Name 4" className="w-full h-full object-cover" />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">Dr. Faculty Name 4</h3>
                     <p className="text-sm text-accent mb-3">AI & Security Researcher</p>
@@ -311,8 +319,8 @@ const Index = () => {
                 </CarouselItem>
                 <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
-                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
-                      <Award className="h-12 w-12 text-accent" />
+                    <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
+                      <img src={faculty5} alt="Expert Name 5" className="w-full h-full object-cover" />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">Expert Name 5</h3>
                     <p className="text-sm text-accent mb-3">Compliance & Risk Advisor</p>
@@ -323,8 +331,8 @@ const Index = () => {
                 </CarouselItem>
                 <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
-                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
-                      <Briefcase className="h-12 w-12 text-accent" />
+                    <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
+                      <img src={faculty6} alt="Industry Leader 6" className="w-full h-full object-cover" />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">Industry Leader 6</h3>
                     <p className="text-sm text-accent mb-3">Cybersecurity Strategist</p>
@@ -335,8 +343,8 @@ const Index = () => {
                 </CarouselItem>
                 <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
-                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mx-auto mb-4 flex items-center justify-center">
-                      <TrendingUp className="h-12 w-12 text-accent" />
+                    <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
+                      <img src={faculty7} alt="Expert Name 7" className="w-full h-full object-cover" />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">Expert Name 7</h3>
                     <p className="text-sm text-accent mb-3">Penetration Testing Expert</p>
@@ -363,8 +371,8 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Card className="p-8 hover:shadow-lg transition-shadow">
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center flex-shrink-0">
-                  <Award className="h-8 w-8 text-accent" />
+                <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                  <img src={successStory1} alt="Success Story" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Elevated to CISO Role</h3>
@@ -381,8 +389,8 @@ const Index = () => {
             </Card>
             <Card className="p-8 hover:shadow-lg transition-shadow">
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center flex-shrink-0">
-                  <TrendingUp className="h-8 w-8 text-accent" />
+                <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                  <img src={successStory2} alt="Success Story" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Built Enterprise Security Framework</h3>
@@ -399,8 +407,8 @@ const Index = () => {
             </Card>
             <Card className="p-8 hover:shadow-lg transition-shadow">
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center flex-shrink-0">
-                  <Briefcase className="h-8 w-8 text-accent" />
+                <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                  <img src={successStory3} alt="Success Story" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Started Security Consulting Firm</h3>
@@ -417,8 +425,8 @@ const Index = () => {
             </Card>
             <Card className="p-8 hover:shadow-lg transition-shadow">
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center flex-shrink-0">
-                  <Lock className="h-8 w-8 text-accent" />
+                <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                  <img src={successStory4} alt="Success Story" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Enhanced Incident Response Capabilities</h3>
