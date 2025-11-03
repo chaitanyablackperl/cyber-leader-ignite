@@ -7,7 +7,7 @@ import drAjitParulekar from "@/assets/dr-ajit-parulekar.png";
 import vithalSukhathankar from "@/assets/vithal-sukhathankar.jpg";
 import akshayBhosale from "@/assets/akshay-bhosale.jpg";
 import archanChoudhary from "@/assets/archan-choudhary.jpg";
-import faculty5 from "@/assets/faculty-5.jpg";
+import rajSekhar from "@/assets/raj-sekhar.jpg";
 import faculty6 from "@/assets/faculty-6.jpg";
 import faculty7 from "@/assets/faculty-7.jpg";
 import successStory1 from "@/assets/success-story-1.jpg";
@@ -320,12 +320,12 @@ const Index = () => {
                 <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
                     <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
-                      <img src={faculty5} alt="Expert Name 5" className="w-full h-full object-cover" />
+                      <img src={rajSekhar} alt="Raj Sekhar" className="w-full h-full object-cover" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">Expert Name 5</h3>
-                    <p className="text-sm text-accent mb-3">Compliance & Risk Advisor</p>
+                    <h3 className="text-xl font-semibold mb-2">Raj Sekhar</h3>
+                    <p className="text-sm text-accent mb-3">Co-Founder and CTO Blackperl DFIR</p>
                     <p className="text-sm text-muted-foreground">
-                      Specialist in regulatory compliance, risk management, and cybersecurity frameworks (ISO, NIST).
+                      Ex-Microsoft with 15 Years of Experience
                     </p>
                   </Card>
                 </CarouselItem>
