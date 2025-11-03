@@ -3,18 +3,24 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Shield, Clock, Award, Users, BookOpen, Briefcase, TrendingUp, Lock, GraduationCap, CheckCircle2 } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 import drAjitParulekar from "@/assets/dr-ajit-parulekar.png";
 import vithalSukhathankar from "@/assets/vithal-sukhathankar.jpg";
 import akshayBhosale from "@/assets/akshay-bhosale.jpg";
 import archanChoudhary from "@/assets/archan-choudhary.jpg";
 import rajSekhar from "@/assets/raj-sekhar.jpg";
-import faculty6 from "@/assets/faculty-6.jpg";
+import adityaPS from "@/assets/aditya-ps.jpg";
 import successStory1 from "@/assets/success-story-1.jpg";
 import successStory2 from "@/assets/success-story-2.jpg";
 import successStory3 from "@/assets/success-story-3.jpg";
 import successStory4 from "@/assets/success-story-4.jpg";
 
 const Index = () => {
+  const autoplayPlugin = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true })
+  );
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -265,6 +271,7 @@ const Index = () => {
                 align: "start",
                 loop: true,
               }}
+              plugins={[autoplayPlugin.current]}
               className="w-full"
             >
               <CarouselContent className="-ml-4">
@@ -331,7 +338,7 @@ const Index = () => {
                 <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
                     <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
-                      <img src={faculty6} alt="Aditya PS" className="w-full h-full object-cover" />
+                      <img src={adityaPS} alt="Aditya PS" className="w-full h-full object-cover" />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">Aditya PS</h3>
                     <p className="text-sm text-accent mb-3">Founder & CEO Terraeagle</p>
