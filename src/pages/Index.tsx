@@ -6,7 +6,7 @@ import { Shield, Clock, Award, Users, BookOpen, Briefcase, TrendingUp, Lock, Gra
 import drAjitParulekar from "@/assets/dr-ajit-parulekar.png";
 import vithalSukhathankar from "@/assets/vithal-sukhathankar.jpg";
 import akshayBhosale from "@/assets/akshay-bhosale.jpg";
-import faculty4 from "@/assets/faculty-4.jpg";
+import archanChoudhary from "@/assets/archan-choudhary.jpg";
 import faculty5 from "@/assets/faculty-5.jpg";
 import faculty6 from "@/assets/faculty-6.jpg";
 import faculty7 from "@/assets/faculty-7.jpg";
@@ -308,12 +308,12 @@ const Index = () => {
                 <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
                     <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
-                      <img src={faculty4} alt="Dr. Faculty Name 4" className="w-full h-full object-cover" />
+                      <img src={archanChoudhary} alt="Archan Choudhary" className="w-full h-full object-cover" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">Dr. Faculty Name 4</h3>
-                    <p className="text-sm text-accent mb-3">AI & Security Researcher</p>
+                    <h3 className="text-xl font-semibold mb-2">Archan Choudhary</h3>
+                    <p className="text-sm text-accent mb-3">Founder & CEO Blackperl DFIR</p>
                     <p className="text-sm text-muted-foreground">
-                      Leading researcher in AI-powered threat detection and machine learning for cybersecurity.
+                      Ex-Amazon
                     </p>
                   </Card>
                 </CarouselItem>
