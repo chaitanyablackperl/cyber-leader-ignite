@@ -9,7 +9,6 @@ import akshayBhosale from "@/assets/akshay-bhosale.jpg";
 import archanChoudhary from "@/assets/archan-choudhary.jpg";
 import rajSekhar from "@/assets/raj-sekhar.jpg";
 import faculty6 from "@/assets/faculty-6.jpg";
-import faculty7 from "@/assets/faculty-7.jpg";
 import successStory1 from "@/assets/success-story-1.jpg";
 import successStory2 from "@/assets/success-story-2.jpg";
 import successStory3 from "@/assets/success-story-3.jpg";
@@ -332,24 +331,12 @@ const Index = () => {
                 <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
                     <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
-                      <img src={faculty6} alt="Industry Leader 6" className="w-full h-full object-cover" />
+                      <img src={faculty6} alt="Aditya PS" className="w-full h-full object-cover" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">Industry Leader 6</h3>
-                    <p className="text-sm text-accent mb-3">Cybersecurity Strategist</p>
+                    <h3 className="text-xl font-semibold mb-2">Aditya PS</h3>
+                    <p className="text-sm text-accent mb-3">Founder & CEO Terraeagle</p>
                     <p className="text-sm text-muted-foreground">
-                      Strategic advisor to C-suite executives on digital transformation and security investments.
-                    </p>
-                  </Card>
-                </CarouselItem>
-                <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
-                    <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
-                      <img src={faculty7} alt="Expert Name 7" className="w-full h-full object-cover" />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">Expert Name 7</h3>
-                    <p className="text-sm text-accent mb-3">Penetration Testing Expert</p>
-                    <p className="text-sm text-muted-foreground">
-                      Ethical hacker and penetration testing specialist with hands-on experience in vulnerability assessment.
+                      Ex-CISO of Unisys With 20+ Years of Experience
                     </p>
                   </Card>
                 </CarouselItem>
