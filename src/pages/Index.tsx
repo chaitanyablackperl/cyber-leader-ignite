@@ -5,7 +5,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Shield, Clock, Award, Users, BookOpen, Briefcase, TrendingUp, Lock, GraduationCap, CheckCircle2 } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
-import drAjitParulekar from "@/assets/dr-ajit-parulekar.png";
+import drAnupKumarMaurya from "@/assets/dr-anup-kumar-maurya.jpg";
 import vithalSukhathankar from "@/assets/vithal-sukhathankar.jpg";
 import akshayBhosale from "@/assets/akshay-bhosale.jpg";
 import archanChoudhary from "@/assets/archan-choudhary.jpg";
@@ -278,12 +278,12 @@ const Index = () => {
                 <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
                     <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
-                      <img src={drAjitParulekar} alt="Dr. Ajit Parulekar" className="w-full h-full object-cover" />
+                      <img src={drAnupKumarMaurya} alt="Dr. Anup Kumar Maurya" className="w-full h-full object-cover" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">Dr. Ajit Parulekar</h3>
-                    <p className="text-sm text-accent mb-3">Director of GIM</p>
+                    <h3 className="text-xl font-semibold mb-2">Dr. Anup Kumar Maurya</h3>
+                    <p className="text-sm text-accent mb-3">Associate Professor</p>
                     <p className="text-sm text-muted-foreground">
-                      Visiting Faculty of ISCTE Business School in Portugal.
+                      Ph.D from IDRBT
                     </p>
                   </Card>
                 </CarouselItem>
