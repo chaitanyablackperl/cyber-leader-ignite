@@ -2,9 +2,18 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Shield, Clock, Award, Users, BookOpen, Briefcase, TrendingUp, Lock, GraduationCap, CheckCircle2 } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { useToast } from "@/hooks/use-toast";
 import drAnupKumarMaurya from "@/assets/dr-anup-kumar-maurya.jpg";
 import vithalSukhathankar from "@/assets/vithal-sukhathankar.jpg";
 import akshayBhosale from "@/assets/akshay-bhosale.jpg";
@@ -16,10 +25,39 @@ import successStory2 from "@/assets/success-story-2.jpg";
 import successStory3 from "@/assets/success-story-3.jpg";
 import successStory4 from "@/assets/success-story-4.jpg";
 
+const formSchema = z.object({
+  name: z.string().trim().min(1, { message: "Name is required" }).max(100, { message: "Name must be less than 100 characters" }),
+  contactNumber: z.string().trim().min(10, { message: "Contact number must be at least 10 digits" }).max(15, { message: "Contact number must be less than 15 digits" }),
+  email: z.string().trim().email({ message: "Invalid email address" }).max(255, { message: "Email must be less than 255 characters" }),
+  message: z.string().trim().min(1, { message: "Message is required" }).max(1000, { message: "Message must be less than 1000 characters" }),
+});
+
 const Index = () => {
   const autoplayPlugin = useRef(
     Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true })
   );
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const { toast } = useToast();
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      contactNumber: "",
+      email: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = (values: z.infer<typeof formSchema>) => {
+    console.log(values);
+    toast({
+      title: "Application Submitted!",
+      description: "Thank you for your interest. We'll get back to you soon.",
+    });
+    form.reset();
+    setIsDialogOpen(false);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -37,7 +75,7 @@ const Index = () => {
             <a href="#success" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Success Stories</a>
             <a href="#details" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Details</a>
           </nav>
-          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Apply Now</Button>
+          <Button onClick={() => setIsDialogOpen(true)} className="bg-primary hover:bg-primary/90 text-primary-foreground">Apply Now</Button>
         </div>
       </header>
 
@@ -70,7 +108,7 @@ const Index = () => {
               </div>
             </div>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8">
+              <Button onClick={() => setIsDialogOpen(true)} size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8">
                 Apply Now
               </Button>
               <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
@@ -500,12 +538,143 @@ const Index = () => {
             Join the next cohort and transform your career with industry-leading expertise
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8">
+            <Button onClick={() => setIsDialogOpen(true)} size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8">
               Apply Now
             </Button>
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-20 bg-background">
+        <div className="container px-4 md:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Frequently Asked Questions</h2>
+            <p className="text-muted-foreground text-center mb-12">
+              Find answers to common questions about the programme
+            </p>
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Who should attend this programme?</AccordionTrigger>
+                <AccordionContent>
+                  This programme is designed for senior management, CXOs, IT leaders, cybersecurity professionals, and business leaders who want to understand and implement strategic cybersecurity governance in their organizations.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>What are the eligibility criteria?</AccordionTrigger>
+                <AccordionContent>
+                  Participants should have a bachelor's degree and at least 5 years of professional experience. Prior knowledge of cybersecurity is helpful but not mandatory, as the programme covers both foundational and advanced concepts.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger>What is the time commitment required?</AccordionTrigger>
+                <AccordionContent>
+                  The programme requires 6-8 hours per week over 8-10 weeks. This includes live sessions, self-paced learning, and project work. Sessions are scheduled to accommodate working professionals.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger>Will I receive a certificate upon completion?</AccordionTrigger>
+                <AccordionContent>
+                  Yes, participants who successfully complete the programme will receive a certificate from Goa Institute of Management (GIM), one of India's top B-schools, in collaboration with BlackPerl DFIR.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-5">
+                <AccordionTrigger>What is the learning mode?</AccordionTrigger>
+                <AccordionContent>
+                  The programme is delivered entirely online through live interactive sessions, recorded lectures, hands-on labs, and practical projects. You can access all materials through our learning platform.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-6">
+                <AccordionTrigger>How is this programme different from other cybersecurity courses?</AccordionTrigger>
+                <AccordionContent>
+                  This programme uniquely combines strategic business leadership with technical cybersecurity expertise. It integrates AI-powered defense strategies, is taught by industry experts from both academia and leading cybersecurity firms, and focuses on practical, real-world applications with 70% hands-on training.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-7">
+                <AccordionTrigger>What kind of projects will I work on?</AccordionTrigger>
+                <AccordionContent>
+                  You'll work on real-world cybersecurity challenges including incident response scenarios, security audits, AI-powered threat detection implementation, and developing comprehensive security strategies for organizations.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-8">
+                <AccordionTrigger>Is financial aid or installment options available?</AccordionTrigger>
+                <AccordionContent>
+                  Yes, we offer flexible payment options including installment plans. Please contact our admissions team for more details about financial assistance and payment schedules.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* Application Dialog */}
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="sm:max-w-[500px]">
+          <DialogHeader>
+            <DialogTitle>Apply for the Programme</DialogTitle>
+            <DialogDescription>
+              Fill in your details and we'll get back to you shortly.
+            </DialogDescription>
+          </DialogHeader>
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Name</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Enter your full name" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="contactNumber"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Contact Number</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Enter your contact number" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Email</FormLabel>
+                    <FormControl>
+                      <Input type="email" placeholder="Enter your email" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Message</FormLabel>
+                    <FormControl>
+                      <Textarea placeholder="Tell us why you're interested in this programme" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <Button type="submit" className="w-full">Submit Application</Button>
+            </form>
+          </Form>
+        </DialogContent>
+      </Dialog>
 
       {/* Footer */}
       <footer className="py-12 bg-secondary/30 border-t border-border">
