@@ -24,6 +24,7 @@ import successStory1 from "@/assets/success-story-1.jpg";
 import successStory2 from "@/assets/success-story-2.jpg";
 import successStory3 from "@/assets/success-story-3.jpg";
 import successStory4 from "@/assets/success-story-4.jpg";
+import certificateSample from "@/assets/certificate-sample.png";
 
 const formSchema = z.object({
   name: z.string().trim().min(1, { message: "Name is required" }).max(100, { message: "Name must be less than 100 characters" }),
@@ -111,8 +112,10 @@ const Index = () => {
               <Button onClick={() => setIsDialogOpen(true)} size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8">
                 Apply Now
               </Button>
-              <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                Download Brochure
+              <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                <a href="/GIM-Advanced-CyberSecurity-Program-Brochure.pptx" download="GIM-Advanced-CyberSecurity-Program-Brochure.pptx">
+                  Download Brochure
+                </a>
               </Button>
             </div>
           </div>
@@ -541,6 +544,25 @@ const Index = () => {
             <Button onClick={() => setIsDialogOpen(true)} size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8">
               Apply Now
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Certificate Section */}
+      <section className="py-20 bg-secondary/20">
+        <div className="container px-4 md:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Programme Completion Certificate</h2>
+            <p className="text-lg text-muted-foreground mb-12">
+              Upon successful completion of the programme, you will receive a certificate from Goa Institute of Management
+            </p>
+            <div className="bg-background rounded-lg shadow-xl p-4 md:p-8">
+              <img 
+                src={certificateSample} 
+                alt="GIM Advanced Cybersecurity Programme Certificate Sample" 
+                className="w-full h-auto rounded-lg border border-border"
+              />
+            </div>
           </div>
         </div>
       </section>
