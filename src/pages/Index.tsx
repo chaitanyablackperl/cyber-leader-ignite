@@ -108,7 +108,7 @@ const Index = () => {
               <Button onClick={() => setIsDialogOpen(true)} size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8">
                 Apply Now
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold whitespace-nowrap">
+              <Button asChild size="lg" variant="outline" className="bg-white/95 border-2 border-white text-primary hover:bg-white hover:text-primary/90 font-bold whitespace-nowrap shadow-lg">
                 <a href="/GIM-Advanced-CyberSecurity-Program-Brochure.pptx" download="GIM-Advanced-CyberSecurity-Program-Brochure.pptx">
                   Download Brochure
                 </a>
