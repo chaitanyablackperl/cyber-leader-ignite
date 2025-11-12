@@ -20,10 +20,6 @@ import akshayBhosale from "@/assets/akshay-bhosale.jpg";
 import archanChoudhary from "@/assets/archan-choudhary.jpg";
 import rajSekhar from "@/assets/raj-sekhar.jpg";
 import adityaPS from "@/assets/aditya-ps.jpg";
-import successStory1 from "@/assets/success-story-1.jpg";
-import successStory2 from "@/assets/success-story-2.jpg";
-import successStory3 from "@/assets/success-story-3.jpg";
-import successStory4 from "@/assets/success-story-4.jpg";
 import certificateSample from "@/assets/certificate-sample.png";
 
 const formSchema = z.object({
@@ -86,7 +82,7 @@ const Index = () => {
         <div className="container relative px-4 md:px-8 py-20 md:py-32">
           <div className="max-w-4xl">
             <Badge className="mb-6 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-4 py-1.5">
-              Technological Partner - BlackPerl DFIR
+              Industry & Knowledge Partner - Blackperl DFIR
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Advanced Cybersecurity Programme for Leaders
@@ -112,7 +108,7 @@ const Index = () => {
               <Button onClick={() => setIsDialogOpen(true)} size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8">
                 Apply Now
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold">
                 <a href="/GIM-Advanced-CyberSecurity-Program-Brochure.pptx" download="GIM-Advanced-CyberSecurity-Program-Brochure.pptx">
                   Download Brochure
                 </a>
@@ -405,14 +401,9 @@ const Index = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Card className="p-8 hover:shadow-lg transition-shadow">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
-                  <img src={successStory1} alt="Success Story" className="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold">Elevated to CISO Role</h3>
-                  <p className="text-sm text-muted-foreground">Senior IT Manager</p>
-                </div>
+              <div className="mb-4">
+                <h3 className="text-lg font-semibold">Elevated to CISO Role</h3>
+                <p className="text-sm text-muted-foreground">Senior IT Manager</p>
               </div>
               <p className="text-muted-foreground italic mb-4">
                 "The program's blend of strategic governance and hands-on AI integration gave me the confidence to lead our organization's security transformation. Within 6 months, I was promoted to CISO."
@@ -423,14 +414,9 @@ const Index = () => {
               </div>
             </Card>
             <Card className="p-8 hover:shadow-lg transition-shadow">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
-                  <img src={successStory2} alt="Success Story" className="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold">Built Enterprise Security Framework</h3>
-                  <p className="text-sm text-muted-foreground">IT Security Lead</p>
-                </div>
+              <div className="mb-4">
+                <h3 className="text-lg font-semibold">Built Enterprise Security Framework</h3>
+                <p className="text-sm text-muted-foreground">IT Security Lead</p>
               </div>
               <p className="text-muted-foreground italic mb-4">
                 "The practical approach and real-world projects prepared me to architect and implement a comprehensive security framework for our 5000+ employee organization."
@@ -441,14 +427,9 @@ const Index = () => {
               </div>
             </Card>
             <Card className="p-8 hover:shadow-lg transition-shadow">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
-                  <img src={successStory3} alt="Success Story" className="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold">Started Security Consulting Firm</h3>
-                  <p className="text-sm text-muted-foreground">Former Security Analyst</p>
-                </div>
+              <div className="mb-4">
+                <h3 className="text-lg font-semibold">Started Security Consulting Firm</h3>
+                <p className="text-sm text-muted-foreground">Former Security Analyst</p>
               </div>
               <p className="text-muted-foreground italic mb-4">
                 "The program's networking opportunities and industry connections helped me launch my own cybersecurity consulting practice. I now serve multiple Fortune 500 clients."
@@ -459,14 +440,9 @@ const Index = () => {
               </div>
             </Card>
             <Card className="p-8 hover:shadow-lg transition-shadow">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
-                  <img src={successStory4} alt="Success Story" className="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold">Enhanced Incident Response Capabilities</h3>
-                  <p className="text-sm text-muted-foreground">Security Operations Manager</p>
-                </div>
+              <div className="mb-4">
+                <h3 className="text-lg font-semibold">Enhanced Incident Response Capabilities</h3>
+                <p className="text-sm text-muted-foreground">Security Operations Manager</p>
               </div>
               <p className="text-muted-foreground italic mb-4">
                 "The AI-powered threat detection techniques I learned reduced our incident response time by 60%. The ROI was evident within the first quarter post-completion."
@@ -491,7 +467,7 @@ const Index = () => {
             </Card>
             <Card className="p-6 text-center">
               <h3 className="text-sm font-medium text-muted-foreground mb-2">Investment</h3>
-              <p className="text-2xl font-bold text-foreground">₹80,000 + GST</p>
+              <p className="text-2xl font-bold text-foreground">₹50,000 + GST</p>
             </Card>
             <Card className="p-6 text-center">
               <h3 className="text-sm font-medium text-muted-foreground mb-2">Learning Mode</h3>
