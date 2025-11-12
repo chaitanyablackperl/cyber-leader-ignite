@@ -405,7 +405,7 @@ const Index = () => {
             <Card className="p-8 hover:shadow-lg transition-shadow">
               <div className="mb-4">
                 <h3 className="text-lg font-semibold">Elevated to CISO Role</h3>
-                <p className="text-sm text-muted-foreground">Senior IT Manager</p>
+                <p className="text-sm text-muted-foreground">Shlok Panchal</p>
               </div>
               <p className="text-muted-foreground italic mb-4">
                 "The program's blend of strategic governance and hands-on AI integration gave me the confidence to lead our organization's security transformation. Within 6 months, I was promoted to CISO."
@@ -418,7 +418,7 @@ const Index = () => {
             <Card className="p-8 hover:shadow-lg transition-shadow">
               <div className="mb-4">
                 <h3 className="text-lg font-semibold">Built Enterprise Security Framework</h3>
-                <p className="text-sm text-muted-foreground">IT Security Lead</p>
+                <p className="text-sm text-muted-foreground">Aditi Gadgil</p>
               </div>
               <p className="text-muted-foreground italic mb-4">
                 "The practical approach and real-world projects prepared me to architect and implement a comprehensive security framework for our 5000+ employee organization."
@@ -431,7 +431,7 @@ const Index = () => {
             <Card className="p-8 hover:shadow-lg transition-shadow">
               <div className="mb-4">
                 <h3 className="text-lg font-semibold">Started Security Consulting Firm</h3>
-                <p className="text-sm text-muted-foreground">Former Security Analyst</p>
+                <p className="text-sm text-muted-foreground">Aniket Jhariya</p>
               </div>
               <p className="text-muted-foreground italic mb-4">
                 "The program's networking opportunities and industry connections helped me launch my own cybersecurity consulting practice. I now serve multiple Fortune 500 clients."
@@ -444,7 +444,7 @@ const Index = () => {
             <Card className="p-8 hover:shadow-lg transition-shadow">
               <div className="mb-4">
                 <h3 className="text-lg font-semibold">Enhanced Incident Response Capabilities</h3>
-                <p className="text-sm text-muted-foreground">Security Operations Manager</p>
+                <p className="text-sm text-muted-foreground">Shruti Agarwal</p>
               </div>
               <p className="text-muted-foreground italic mb-4">
                 "The AI-powered threat detection techniques I learned reduced our incident response time by 60%. The ROI was evident within the first quarter post-completion."
