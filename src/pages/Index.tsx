@@ -108,7 +108,7 @@ const Index = () => {
               <Button onClick={() => setIsDialogOpen(true)} size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8">
                 Apply Now
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold">
+              <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold whitespace-nowrap">
                 <a href="/GIM-Advanced-CyberSecurity-Program-Brochure.pptx" download="GIM-Advanced-CyberSecurity-Program-Brochure.pptx">
                   Download Brochure
                 </a>
@@ -356,7 +356,8 @@ const Index = () => {
                     <h3 className="text-xl font-semibold mb-2">Archan Choudhary</h3>
                     <p className="text-sm text-accent mb-3">Founder & CEO Blackperl DFIR</p>
                     <p className="text-sm text-muted-foreground">
-                      Ex-Amazon
+                      Ex-Amazon, Ex-Unilever<br />
+                      Over 15+ Years Industry Experience
                     </p>
                   </Card>
                 </CarouselItem>
@@ -368,7 +369,8 @@ const Index = () => {
                     <h3 className="text-xl font-semibold mb-2">Raj Sekhar</h3>
                     <p className="text-sm text-accent mb-3">Co-Founder and CTO Blackperl DFIR</p>
                     <p className="text-sm text-muted-foreground">
-                      Ex-Microsoft with 15 Years of Experience
+                      Cyber Architect over<br />
+                      16+ Years Industry Experience
                     </p>
                   </Card>
                 </CarouselItem>
@@ -573,7 +575,7 @@ const Index = () => {
               <AccordionItem value="item-4">
                 <AccordionTrigger>Will I receive a certificate upon completion?</AccordionTrigger>
                 <AccordionContent>
-                  Yes, participants who successfully complete the programme will receive a certificate from Goa Institute of Management (GIM), one of India's top B-schools, in collaboration with BlackPerl DFIR.
+                  Yes, participants who successfully complete the programme will receive a Certificate from GIM in collaboration with Blackperl, along with a Global Pearson Certificate for course completion.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-5">
@@ -687,8 +689,8 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <p className="text-sm text-muted-foreground">
-                For inquiries about the program,<br />
-                please contact our admissions team.
+                Phone: +91-9730736555<br />
+                Email: cybersecurityonline@gim.ac.in
               </p>
             </div>
             <div>
