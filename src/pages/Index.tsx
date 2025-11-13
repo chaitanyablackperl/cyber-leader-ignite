@@ -21,6 +21,7 @@ import archanChoudhary from "@/assets/archan-choudhary.jpg";
 import rajSekhar from "@/assets/raj-sekhar.jpg";
 import adityaPS from "@/assets/aditya-ps.jpg";
 import certificateSample from "@/assets/certificate-sample.png";
+import pearsonCertificate from "@/assets/pearson-certificate.jpg";
 
 const formSchema = z.object({
   name: z.string().trim().min(1, { message: "Name is required" }).max(100, { message: "Name must be less than 100 characters" }),
@@ -497,7 +498,7 @@ const Index = () => {
               <p className="text-2xl font-bold text-foreground">8-10 Weeks</p>
             </Card>
             <Card className="p-6 text-center">
-              <h3 className="text-sm font-medium text-muted-foreground mb-2">Investment</h3>
+              <h3 className="text-sm font-medium text-muted-foreground mb-2">Programme Fee</h3>
               <p className="text-2xl font-bold text-foreground">₹50,000 + GST</p>
             </Card>
             <Card className="p-6 text-center">
@@ -507,6 +508,13 @@ const Index = () => {
             <Card className="p-6 text-center">
               <h3 className="text-sm font-medium text-muted-foreground mb-2">Weekly Effort</h3>
               <p className="text-2xl font-bold text-foreground">8-10 Hours</p>
+            </Card>
+          </div>
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <Card className="p-6 bg-accent/10 border-accent/20">
+              <p className="text-lg font-semibold text-foreground">
+                Course starts in January 4th Week - 2026
+              </p>
             </Card>
           </div>
           <div className="max-w-4xl mx-auto">
@@ -558,17 +566,27 @@ const Index = () => {
       {/* Certificate Section */}
       <section className="py-20 bg-secondary/20">
         <div className="container px-4 md:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Programme Completion Certificate</h2>
             <p className="text-lg text-muted-foreground mb-12">
-              Upon successful completion of the programme, you will receive a certificate from Goa Institute of Management
+              Upon successful completion of the programme, you will receive certificates from Goa Institute of Management and Pearson
             </p>
-            <div className="bg-background rounded-lg shadow-xl p-4 md:p-8">
-              <img 
-                src={certificateSample} 
-                alt="GIM Advanced Cybersecurity Programme Certificate Sample" 
-                className="w-full h-auto rounded-lg border border-border"
-              />
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+              <div className="bg-background rounded-lg shadow-xl p-4 md:p-8 flex-1 max-w-2xl">
+                <img 
+                  src={certificateSample} 
+                  alt="GIM Advanced Cybersecurity Programme Certificate Sample" 
+                  className="w-full h-auto rounded-lg border border-border"
+                />
+              </div>
+              <div className="text-4xl font-bold text-accent">+</div>
+              <div className="bg-background rounded-lg shadow-xl p-4 md:p-8 flex-1 max-w-2xl">
+                <img 
+                  src={pearsonCertificate} 
+                  alt="Pearson Certificate Sample" 
+                  className="w-full h-auto rounded-lg border border-border"
+                />
+              </div>
             </div>
           </div>
         </div>
