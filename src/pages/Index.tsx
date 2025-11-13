@@ -34,6 +34,7 @@ const Index = () => {
     Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true })
   );
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [hasSubmittedForm, setHasSubmittedForm] = useState(false);
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -48,12 +49,42 @@ const Index = () => {
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     console.log(values);
+    setHasSubmittedForm(true);
     toast({
       title: "Application Submitted!",
-      description: "Thank you for your interest. We'll get back to you soon.",
+      description: "Your brochure download will start shortly.",
     });
     form.reset();
     setIsDialogOpen(false);
+    
+    // Trigger brochure download after form submission
+    setTimeout(() => {
+      const link = document.createElement('a');
+      link.href = '/GIM-Advanced-CyberSecurity-Program-Brochure.pptx';
+      link.download = 'GIM-Advanced-CyberSecurity-Program-Brochure.pptx';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, 500);
+  };
+
+  const handleDownloadClick = () => {
+    if (hasSubmittedForm) {
+      // Allow direct download
+      const link = document.createElement('a');
+      link.href = '/GIM-Advanced-CyberSecurity-Program-Brochure.pptx';
+      link.download = 'GIM-Advanced-CyberSecurity-Program-Brochure.pptx';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      // Open application form first
+      setIsDialogOpen(true);
+      toast({
+        title: "Application Required",
+        description: "Please fill out the application form to download the brochure.",
+      });
+    }
   };
 
   return (
@@ -108,10 +139,8 @@ const Index = () => {
               <Button onClick={() => setIsDialogOpen(true)} size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8">
                 Apply Now
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-white/95 border-2 border-white text-primary hover:bg-white hover:text-primary/90 font-bold whitespace-nowrap shadow-lg">
-                <a href="/GIM-Advanced-CyberSecurity-Program-Brochure.pptx" download="GIM-Advanced-CyberSecurity-Program-Brochure.pptx">
-                  Download Brochure
-                </a>
+              <Button onClick={handleDownloadClick} size="lg" variant="outline" className="bg-white/95 border-2 border-white text-primary hover:bg-white hover:text-primary/90 font-bold whitespace-nowrap shadow-lg">
+                Download Brochure
               </Button>
             </div>
           </div>
