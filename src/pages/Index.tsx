@@ -499,7 +499,7 @@ const Index = () => {
             </Card>
             <Card className="p-6 text-center">
               <h3 className="text-sm font-medium text-muted-foreground mb-2">Programme Fee</h3>
-              <p className="text-lg font-bold text-foreground"><strong>Contact us for the cost of the program</strong></p>
+              <p className="text-2xl font-bold text-foreground">Contact us</p>
             </Card>
             <Card className="p-6 text-center">
               <h3 className="text-sm font-medium text-muted-foreground mb-2">Learning Mode</h3>
@@ -539,7 +539,7 @@ const Index = () => {
                     Certificate
                   </h4>
                   <p className="text-muted-foreground">
-                    Upon successful completion, participants will receive a verified digital certificate from GIM & BlackPerl, recognized across the industry.
+                    Upon successful completion, participants will receive a verified digital certificate from GIM & BlackPerl, recognized across the industry. Participants will be getting a <strong>Global</strong> Certification from Pearson.
                   </p>
                 </div>
               </div>
@@ -569,7 +569,7 @@ const Index = () => {
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Programme Completion Certificate</h2>
             <p className="text-lg text-muted-foreground mb-12">
-              Upon successful completion of the programme, you will receive certificates from Goa Institute of Management and Pearson. Participants will be getting a <strong>Global</strong> Certification from Pearson.
+              Upon successful completion of the programme, you will receive certificates from Goa Institute of Management and Pearson.
             </p>
             <div className="flex flex-col md:flex-row items-center justify-center gap-8">
               <div className="bg-background rounded-lg shadow-xl p-4 md:p-8 flex-1 max-w-2xl">
