@@ -539,7 +539,7 @@ const Index = () => {
                     Certificate
                   </h4>
                   <p className="text-muted-foreground">
-                    Upon successful completion, participants will receive a verified digital certificate from GIM & BlackPerl, recognized across the industry. Participants will be getting a <strong>Global</strong> Certification from Pearson.
+                    Upon successful completion, participants will receive a verified digital certificate from GIM & BlackPerl, recognized across the industry. Participants will be getting a <strong>Global Certification from Pearson.</strong>
                   </p>
                 </div>
               </div>
