@@ -61,8 +61,8 @@ const Index = () => {
     // Trigger brochure download after form submission
     setTimeout(() => {
       const link = document.createElement('a');
-      link.href = '/GIM-Advanced-CyberSecurity-Program-Brochure.pptx';
-      link.download = 'GIM-Advanced-CyberSecurity-Program-Brochure.pptx';
+      link.href = '/GIM-Advanced-CyberSecurity-Program-Brochure.pdf';
+      link.download = 'GIM-Advanced-CyberSecurity-Program-Brochure.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -73,8 +73,8 @@ const Index = () => {
     if (hasSubmittedForm) {
       // Allow direct download
       const link = document.createElement('a');
-      link.href = '/GIM-Advanced-CyberSecurity-Program-Brochure.pptx';
-      link.download = 'GIM-Advanced-CyberSecurity-Program-Brochure.pptx';
+      link.href = '/GIM-Advanced-CyberSecurity-Program-Brochure.pdf';
+      link.download = 'GIM-Advanced-CyberSecurity-Program-Brochure.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
