@@ -16,7 +16,7 @@ import * as z from "zod";
 import { useToast } from "@/hooks/use-toast";
 import drAnupKumarMaurya from "@/assets/dr-anup-kumar-maurya.jpg";
 import vithalSukhathankar from "@/assets/vithal-sukhathankar.jpg";
-import akshayBhosale from "@/assets/akshay-bhosale.jpg";
+import arpitKumar from "@/assets/arpit-kumar.jpg";
 import archanChoudhary from "@/assets/archan-choudhary.jpg";
 import rajSekhar from "@/assets/raj-sekhar.jpg";
 import adityaPS from "@/assets/aditya-ps.jpg";
@@ -369,12 +369,12 @@ const Index = () => {
                 <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="p-6 text-center hover:shadow-lg transition-shadow h-full">
                     <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
-                      <img src={akshayBhosale} alt="Akshay Bhosale" className="w-full h-full object-cover" />
+                      <img src={arpitKumar} alt="Arpit Kumar" className="w-full h-full object-cover" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">Akshay Bhosale</h3>
-                    <p className="text-sm text-accent mb-3">Assistant Professor, Operations & Analytics</p>
+                    <h3 className="text-xl font-semibold mb-2">Arpit Kumar</h3>
+                    <p className="text-sm text-accent mb-3">Sr.Security Engineer at Blackperl DFIR</p>
                     <p className="text-sm text-muted-foreground">
-                      Ph.D. from Industrial and Systems Engineering from IIT Kharagpur
+                      5+ years of experience in the industry
                     </p>
                   </Card>
                 </CarouselItem>
